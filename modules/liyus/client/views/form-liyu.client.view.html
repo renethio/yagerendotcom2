@@ -1,0 +1,108 @@
+<section>
+
+   <div>
+   <h1 style="height: 50px;"></h1>
+ </div>
+
+  <div class="card col-lg-8 col-md-8 col-sm-8 col-xs-12 mx-auto">
+    <h1 class="card-header bg-warning">{{vm.liyu._id ? 'Edit Liyu' : 'New Skill'}}</h1>
+  
+
+
+
+
+<div class="col-md-6 col-lg-6 col-sm-6 col-xs-4 col-lg-offset-2 col-md-offset-2 col-sm-offset-2">
+
+      <div class="list-group">
+    <a ng-repeat="liyu in vm.liyus"
+       ui-sref="liyus.view({ liyuId: liyu._id })"
+       class="list-group-item">
+      <small class="list-group-item-text">
+        Posted on
+        <span ng-bind="liyu.created | date:'mediumDate'"></span>
+        by
+        <span ng-if="liyu.user" ng-bind="liyu.user.displayName"></span>
+        <span ng-if="!liyu.user">Deleted User</span>
+      </small>
+      <h4 class="list-group-item-heading" ng-bind="liyu.name"></h4>
+    </a>
+  </div>
+  
+
+
+  
+    <form name="vm.form.liyuForm" class="form-horizontal" ng-submit="vm.save(vm.form.liyuForm.$valid)" novalidate>
+      <fieldset>
+
+        <div ng-show="vm.error" class="text-danger">
+          <strong ng-bind="vm.error"></strong>
+        </div>
+
+    
+<!--       <div class="col-sm-6 text-center">
+        <i class="glyphicon glyphicon-home akeray-profile " 
+        ng-class = "{'text-primary': preferred, 'text-danger': !preferred}"></i>
+      </div> -->
+
+        
+        <label class="control-label" for="skill"> What type is your skill</label>
+          <input name="skill" type="text" ng-model="vm.liyu.skill" id="skill" class="form-control" placeholder="Skill" required>
+          <div ng-messages="vm.form.liyuForm.skill.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Skill type is required.</p>
+          </div>
+        
+      
+        <label class="control-label" for="bedroom">How many years of experience</label>
+          <input name="experience" type="text" ng-model="vm.liyu.experience" id="experience" class="form-control" placeholder="years of experience" required>
+          <div ng-messages="vm.form.liyuForm.experience.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Years of experience is required.</p>
+          </div>
+    
+        <label class="control-label" for="bedroom">street</label>
+          <input name="city" type="text" ng-model="vm.liyu.street" id="street" class="form-control" placeholder="street address" required>
+          <div ng-messages="vm.form.liyuForm.street.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Street name required.</p>
+          </div>
+  
+
+        <label class="control-label" for="city">City</label>
+          <input name="city" type="text" ng-model="vm.liyu.city" id="city" class="form-control" placeholder="city" required>
+          <div ng-messages="vm.form.liyuForm.city.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">City is required.</p>
+          </div>
+
+
+        <label class="control-label" for="state">State</label>
+          <input name="state" type="text" ng-model="vm.liyu.state" id="state" class="form-control" placeholder="State" required>
+          <div ng-messages="vm.form.liyuForm.state.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">State required.</p>
+          </div>
+  
+
+        <label class="control-label" for="zip">Zip Code</label>
+          <input name="zip" type="text" ng-model="vm.liyu.zip" id="zip" class="form-control" placeholder="Zip code" required>
+          <div ng-messages="vm.form.liyuForm.zip.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Zip is required.</p>
+          </div>
+
+
+
+        <label class="control-label" for="zip">Phone Number</label>
+          <input name="phone" type="text" ng-model="vm.liyu.phone" id="phone" class="form-control" placeholder="Phone Number" required>
+          <div ng-messages="vm.form.liyuForm.phone.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Zip is required.</p>
+          </div>
+
+
+        <div class="form-group">
+          <button type="submit" class="btn btn-success btn-lg btn-block">{{vm.liyu._id ? 'Update' : 'Create'}}</button>
+        </div>
+
+      </fieldset>
+    </form>
+  
+
+</div>
+
+
+</section>

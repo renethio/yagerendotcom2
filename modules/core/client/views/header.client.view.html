@@ -1,0 +1,279 @@
+
+<div ng-controller="HeaderController">  <!-- removed a container class from this line -->
+<!-- <div style="width: 100%; overflow: hidden;" class="row">
+
+
+<div style="width: 600px; float: left;" class="logo">
+ <li><a ui-sref="home"><img src="/modules/core/client/img/loaders/logo2.png"></a></li>
+</div>
+ <div style="margin-left: 620px;" class="header">
+
+
+
+    <ul class="nav navbar-nav navbar-right" ng-hide="authentication.user">
+
+      <li ui-sref-active="active">
+        <a>Advertise</a>
+      </li>
+      <li ui-sref-active="active">
+        <a>About Us</a>
+      </li>      
+      <li ui-sref-active="active">
+        <a ui-sref="authentication.signup">Sign Up</a>
+      </li>
+     
+      <li ui-sref-active="active">
+        <a ui-sref="authentication.signin">Sign In</a>
+      </li>
+    </ul>
+  </div>
+
+
+  
+</div> -->
+
+
+
+
+<!-- <div class="container">
+<nav class="navbar navbar-default">
+ <div class="container-fluid">
+
+<div class="navbar-header">
+
+  <button type="button" class="collapsed navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="true">
+
+    <span class="sr-only"></span>
+
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+
+  </button>
+
+<a class="pull-left" href="/"><img src="/modules/core/client/img/loaders/logo2.png"></a>
+<a class="navbar-brand hidden-lg hidden-md hidden-sm" href="#">  AkerayTekeray</a>
+
+</div>
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+<ul class="nav navbar-nav pull-right">
+<li><a href="/">Advertise</a> </li>
+<li><a href="/">About Us </a> </li>
+<li><a href="/">Contact Us</a> </li>
+<li><a href="/">Sign in </a> </li>
+<li><a href="/">signup </a> </li>
+  
+</ul>
+  
+</div>
+ </div>  
+</nav>
+</div>
+ -->
+
+<!-- <div class="container">
+<a class="mt-0 ml-0 mr-auto" href="/"><img style="height: 100px ; width: 100px; border-radius: 10px " src="/modules/core/client/img/loaders/logo2.png"></a>
+    <nav class="navbar navbar-expand-md navbar-light bg-light mt-1" style="height: 30px;">
+          
+          <a  style="height: 30px; width: 140px" class="navbar-brand hidden-lg hidden-md hidden-sm" href="#"><strong>Yagere</strong></a>
+             <div class="navbar-header">
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse bg-light" id="navbarNav">
+              <ul class="navbar-nav mt-0 mr-auto">
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Advertise</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link sm-" href="#">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Contact Us</a>
+                  </li class="nav-item">
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Sign in</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">sign Up</a>
+                  </li>
+              </ul>
+            </div>
+           </div>
+    </nav>
+
+</div> -->
+
+<style>
+
+@media (min-width:300px) {
+.logo {
+  /*display: inline-block;*/
+
+  width: 50px;
+  height: 50px;
+}
+}
+
+@media (min-width:576px) {
+  body {
+    background-color: red;
+   
+  }
+  .logo {
+  /*display: inline-block;*/
+
+  width: 100px;
+  height: 100px;
+}
+}
+
+</style>
+
+    <nav class="navbar navbar-expand-sm navbar-light bg-success border border-warning navbar-fixed-top">
+        <!-- <div class="container"> -->
+           <a class="logo mt-0 ml-0 mr-auto" href="/"><img src="/modules/core/client/img/loaders/logo2.png" class="rounded img-fluid">
+            </a>
+
+            <a  style="height: 30px; width: 100px" class="navbar-brand hidden-lg hidden-md hidden-sm text-white" href="/"> Yagere</a>
+         
+         <button 
+         type="button" 
+         class="navbar-toggler border-warning bg-warning" 
+         data-toggle="collapse" 
+         data-target="#navbarNav"> 
+          <span class="navbar-toggler-icon"></span></button>
+
+
+        
+
+          <div>
+         <div class="collapse navbar-collapse p-4" id="navbarNav">
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                      <a class="nav-link text-white" href="/advertise">Advertise</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-white" href="/about">About</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-white" href="/contact">Contact</a>
+                  </li class="nav-item">
+              
+                  <li class="nav-item" ui-sref-active="active" ng-hide="authentication.user">
+                      <a class="nav-link text-white" ui-sref="authentication.signin" >sign in</a>
+                  </li>
+                  <li class="nav-item" ui-sref-active="active" ng-hide="authentication.user">
+                      <a class="nav-link text-white" ui-sref="authentication.signup" >sign up</a>
+                  </li>
+              </ul>
+            </div>
+          </div>
+          <!-- </div> -->
+    </nav>
+
+
+
+<div>
+  <h1 style="height: 50px;">
+    
+  </h1>
+</div>
+
+
+
+
+
+
+
+<!--   <div class="navbar-header">
+    <button class="navbar-toggle" type="button" ng-click="toggleCollapsibleMenu()">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a ui-sref="home" class="navbar-brand">Teyikun</a>
+  </div> -->
+<!--   <nav class="collapse navbar-collapse" collapse="!isCollapsed" role="navigation">
+  <div class="container">
+    <ul class="nav navbar-nav" ng-if="menu.shouldRender(authentication.user);">
+      <li ng-repeat="item in menu.items | orderBy: 'position'" ng-if="item.shouldRender(authentication.user);" ng-switch="item.type" ng-class="{ active: $state.includes(item.state), dropdown: item.type === 'dropdown' }" class="{{item.class}}" dropdown="item.type === 'dropdown'">
+        <a ng-switch-when="dropdown" class="dropdown-toggle" dropdown-toggle role="button">{{::item.title}}&nbsp;<span class="caret"></span></a>
+        <ul ng-switch-when="dropdown" class="dropdown-menu">
+          <li ng-repeat="subitem in item.items | orderBy: 'position'" ng-if="subitem.shouldRender(authentication.user);" ui-sref-active="active">
+            <a ui-sref="{{subitem.state}}" ng-bind="subitem.title"></a>
+          </li>
+        </ul>
+        <a ng-switch-default ui-sref="{{item.state}}" ng-bind="item.title"></a>
+      </li>
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right" ng-hide="authentication.user">
+      <li ui-sref-active="active">
+        <a ui-sref="authentication.signup">Sign Up</a>
+      </li>
+      <li class="divider-vertical"></li>
+      <li ui-sref-active="active">
+        <a ui-sref="authentication.signin">Sign In</a>
+      </li>
+    </ul>
+ -->
+
+<nav class="navbar-nav mr-md-right" ng-show="authentication.user">
+    <ul class="col col-lg-2 mr-right">
+      <li class="dropdown">
+        <a class="dropdown-toggle user-header-dropdown-toggle bg-success" data-toggle="dropdown" role="button">
+          <img ng-src="{{authentication.user.profileImageURL}}" alt="{{authentication.user.displayName}}" class="header-profile-image"/>
+          <span ng-bind="authentication.user.displayName"></span> <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu" role="menu">
+          <li ui-sref-active="active">
+            <a ui-sref="settings.profile">Edit Profile</a>
+          </li>
+          <li ui-sref-active="active">
+            <a ui-sref="settings.picture">Change Profile Picture</a>
+          </li>
+          <li ui-sref-active="active" ng-show="authentication.user.provider === 'local'">
+            <a ui-sref="settings.password">Change Password</a>
+          </li>
+          <li ui-sref-active="active">
+            <a ui-sref="settings.accounts">Manage Social Accounts</a>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a href="/api/auth/signout" target="_self">Signout</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+</nav>
+
+
+<!--     <ul class="nav navbar-nav navbar-right" ng-show="authentication.user">
+      <li class="dropdown" dropdown>
+        <a class="dropdown-toggle user-header-dropdown-toggle bg-success" dropdown-toggle role="button">
+          <img ng-src="{{authentication.user.profileImageURL}}" alt="{{authentication.user.displayName}}" class="header-profile-image"/>
+          <span ng-bind="authentication.user.displayName"></span> <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu" role="menu">
+          <li ui-sref-active="active">
+            <a ui-sref="settings.profile">Edit Profile</a>
+          </li>
+          <li ui-sref-active="active">
+            <a ui-sref="settings.picture">Change Profile Picture</a>
+          </li>
+          <li ui-sref-active="active" ng-show="authentication.user.provider === 'local'">
+            <a ui-sref="settings.password">Change Password</a>
+          </li>
+          <li ui-sref-active="active">
+            <a ui-sref="settings.accounts">Manage Social Accounts</a>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a href="/api/auth/signout" target="_self">Signout</a>
+          </li>
+        </ul>
+      </li>
+    </ul> -->
+  
+</div>

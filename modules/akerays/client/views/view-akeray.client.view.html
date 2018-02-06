@@ -1,0 +1,38 @@
+<section>
+  <div class="card col-lg-8 col-md-8 col-sm-8 col-xs-12 mx-auto">
+    <h2 class="card-header bg-warning">{{vm.akeray.type}}</h2>
+  <div class="page-header">
+  <h5 ng-bind="vm.akeray.description"> </h5>
+      
+      <h6 class="text-justify">State: {{vm.akeray.state}}</h6>
+      <h6 class="text-justify">City: {{vm.akeray.city}}</h6>
+      <!-- <h6 class="text-justify">Type: {{vm.akeray.type}}</h6> -->
+      <h6 class="text-justify">Zip: {{vm.akeray.zip}}</h6>
+      <h6 class="text-justify">Phone: {{vm.akeray.phone}}</h6>
+      <h6 class="text-justify"> <a href="/akerays">Back to list</a></h6>
+  </div>
+  <div class="pull-right"
+       ng-show="vm.akeray.isCurrentUserOwner">
+    <a class="btn btn-primary"
+       ui-sref="akerays.edit({ akerayId: vm.akeray._id })">
+      <!-- <i class="glyphicon glyphicon-edit"></i> -->
+    <h8>Edit</h8>
+    </a>
+    <a class="btn btn-primary" ng-click="vm.remove()">
+      <!-- <i class="glyphicon glyphicon-trash"></i> -->
+      <h8 class="text-white">Delete</h8>
+    </a>
+  </div>
+  <small>
+    <em class="text-muted">
+      Posted on
+     <h1> <span ng-bind="vm.akeray.created | date:'mediumDate'"></span></h1>
+      by
+      <span ng-if="vm.akeray.user"
+            ng-bind="vm.akeray.user.displayName"></span>
+      <span ng-if="!vm.akeray.user">Deleted User</span>
+    </em>
+  </small>
+  <p class="lead" ng-bind="vm.akeray.content"></p>
+</div>
+</section>

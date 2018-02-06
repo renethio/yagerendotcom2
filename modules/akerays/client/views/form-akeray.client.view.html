@@ -1,0 +1,102 @@
+<section>
+
+   <div>
+   <h1 style="height: 0px;"></h1>
+ </div>
+
+  <div class="card col-lg-8 col-md-8 col-sm-8 col-xs-12 mx-auto">
+    <h1 class="card-header bg-warning">{{vm.akeray._id ? 'Edit Akeray' : 'Add Home/ዬሚኬራ ቤት ያስጌቡ'}}</h1>
+  
+
+
+
+  <div class="col-md-6 col-lg-6 col-sm-6 col-xs-4 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 mx-auto">
+
+  <div class="card-img-top" style="font-size: 10rem;">
+        <i class="glyphicon glyphicon-home akeray-profile " 
+        ng-class = "{'text-primary': preferred, 'text-danger': !preferred}"></i>
+  </div>
+    
+  <form name="vm.form.akerayForm" class="form-horizontal" ng-submit="vm.save(vm.form.akerayForm.$valid)" novalidate>
+      <fieldset>
+
+        <div class="form-group" show-errors>
+
+        <div ng-show="vm.error" class="text-danger ">
+          <strong ng-bind="vm.error"></strong>
+        </div>
+      
+      <br>  
+      
+        <label class="control-label" for="description"> Give a full brief description</label>
+          <input name="description" type="text" ng-model="vm.akeray.description" id="description" class="form-control" placeholder="Name" required>
+          <div ng-messages="vm.form.akerayForm.description.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Please describe your house.</p>
+          </div>
+        
+        <br>
+        
+        <label class="control-label" for="type">Type of house</label>
+          <input name="type" type="text" ng-model="vm.akeray.type" id="type" class="form-control" placeholder="Type of house">
+          <!-- <div ng-messages="vm.form.akerayForm.type.$error" role="alert"> -->
+            <!-- <p class="help-block error-text" ng-message="required">House type is required.</p> -->
+          <!-- </div> -->
+        
+          <br>
+
+        <label class="control-label" for="street">street</label>
+          <input name="city" type="text" ng-model="vm.akeray.street" id="street" class="form-control" placeholder="street address">
+<!--           <div ng-messages="vm.form.akerayForm.street.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Street name required.</p>
+          </div> -->
+        
+        <br>
+
+
+        <label class="control-label" for="city">City</label>
+          <input name="city" type="text" ng-model="vm.akeray.city" id="city" class="form-control" placeholder="city" required>
+          <div ng-messages="vm.form.akerayForm.city.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">City is required.</p>
+          </div>
+      
+      <br>
+        
+        <label class="control-label" for="state">State</label>
+          <input name="state" type="text" ng-model="vm.akeray.state" id="state" class="form-control" placeholder="State" required>
+          <div ng-messages="vm.form.akerayForm.state.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">State required.</p>
+          </div>
+        
+        <br>
+
+
+        <label class="control-label" for="zip">Zip Code</label>
+          <input name="zip" type="text" ng-model="vm.akeray.zip" id="zip" class="form-control" placeholder="Zip optional">
+          <!-- <div ng-messages="vm.form.akerayForm.zip.$error" role="alert"> -->
+            <!-- <p class="help-block error-text" ng-message="required">Zip is required.</p> -->
+          <!-- </div> -->
+        
+       <label class="control-label" for="phone">Phone</label>
+          <input name="phone" type="text" ng-model="vm.akeray.phone" id="phone" class="form-control" placeholder="Phone No." required>
+          <div ng-messages="vm.form.akerayForm.phone.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Phone number is required.</p>
+          </div>
+
+        <label class="control-label" for="price">Price</label>
+          <input name="price" type="text" ng-model="vm.akeray.price" id="price" class="form-control" placeholder="optional">
+          <!-- <div ng-messages="vm.form.akerayForm.phone.$error" role="alert"> -->
+            <!-- <p class="help-block error-text" ng-message="required">Phone number is required.</p> -->
+          <!-- </div> -->
+
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="btn btn-success btn-lg btn-block">{{vm.akeray._id ? 'Update' : 'Create'}}</button>
+        </div>
+      
+
+      </fieldset>
+    </form>
+  </div>
+</div>
+</section>

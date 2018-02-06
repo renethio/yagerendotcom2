@@ -1,0 +1,92 @@
+<section ng-controller="HomeController" data-ng-init="find()">
+  <!-- <div class="card-group"> -->
+
+ <div>
+   <h1 style="height: 50px;"></h1>
+ </div>
+
+
+  <div class="card col-lg-8 col-md-8 col-sm-8 col-xs-12 mx-auto">
+      <h2 class="card-header bg-warning">List of Homes / ዬሚኬራዩ ቤቶ          <button class="btn btn-danger col-lg-offset-2">
+           <i class="glyphicon glyphicon-home"></i><a ui-sref="akerays.create" class="text-white">
+    ኣዲስ ቤት ኣኬራይ</a>
+        </button></h2> 
+      <br>
+
+    <!-- <div class="col-lg-5 col-xs-4 col-lg-offset-4 col-md-5 col-md-offset-4 col-sm-offset-4 col-sm-4 col-xs-4 col-xs-offset-0"> -->
+    <!-- <div class="col-xs-offset-0 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-lg-8 col-md-8 col-sm-8 col-xs-12"> -->
+      <div class="input-group col-lg-8 col-lg-offset-2 mx-auto">
+        <input type="text" class="form-control" ng-model="searchText" placeholder="Enter an address, State or Zip ...">
+        <span class="input-group-btn">
+          <button class="btn btn-success" type="button">Search/ቤት ፌል</button>
+          
+        </span>
+
+      </div><!-- /input-group -->
+
+<br>
+
+      <!-- </div>/.col-lg-6 -->
+    
+
+
+
+
+
+    <!-- <div class="card col-xs-offset-0 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-lg-6 col-md-6 col-sm-6 col-xs-12""> -->
+
+      <!-- <div class="col-xs-12 col-lg-6 col-sm-4 text-center"> -->
+
+
+    
+
+  
+  
+  <!-- /.row -->
+
+    
+  <div class="list-group-item" ng-repeat="akeray in vm.akerays | filter:searchText">
+    <a
+       ui-sref="akerays.view({ akerayId: akeray._id })">
+  
+      <h6 class="text-justify" class="list-group-item-heading" ng-bind="akeray.description"></h6>
+    </a>
+     <p class="text-justify" >{{akeray.city}}, {{akeray.state}}, {{akeray.type}} &nbsp; &nbsp; Phone: {{akeray.phone}} </p>
+
+      
+
+    
+
+
+
+  </div>
+
+
+<!--   <div class="mymap" class=" col-sm-6 col-push-6"> Map that shows the location of the place goes here
+
+<p>
+  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+
+</p>
+
+
+
+  </div> -->
+  
+ <button type="button" class="btn btn-danger btn-block">
+    <i class="glyphicon glyphicon-home"></i><a ui-sref="akerays.create" class="text-white" >
+    ኣዲስ ቤት ኣኬራይ</a>
+  </button>
+
+
+ 
+
+  <div class="alert alert-warning text-center" ng-if="vm.akerays.$resolved && !vm.akerays.length">
+    No Akerays yet, why don't you <a ui-sref="akerays.create">create one</a>?
+  </div>
+<!-- </div> -->
+<!-- </div> -->
+</div>
+</section>
